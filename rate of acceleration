@@ -1,0 +1,51 @@
+/*****						*****
+****						*****
+**** Rate of acceleration	 ****
+****					 *****
+	**************************
+*****			Description:			*****
+*****	The Software Development Method *****
+
+1. Problem Requirements: To writea computer program that calculates the 
+	cyclist's constant rate of acceleration and determines how long the 
+	cyclist will take to come to rest.
+2. Inputs: Time, Final Velocity, and Initial Velocity. Outputs: Acceleration
+3. Algorithm:
+	 - Retrieve and store the data
+	 - Perform the computations
+	 - Output the results
+4. Defined and commented in program
+5. Verified
+***********************************
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+	double acceleration; /* Output calculated */
+	double time;		/* time in seconds */
+	double final_velocity; /* Cyclist's final speed */
+	double initial_velocity; /* Cyclist's starting speed */
+
+	/* Retrives initial speed */
+	printf("Enter your initial speed: ");
+	scanf_s("%lf", &initial_velocity);
+
+	/* Retrives final speed */
+	printf("Enter your final speed: ");
+	scanf_s("%lf", &final_velocity);
+
+	/* Retrieves time spent on the bike */
+	printf("Please enter your time biking today: ");
+	scanf_s("%lf", &time);
+
+	/* Assignment Statement */
+	acceleration = (final_velocity - initial_velocity) / (time);
+
+	/* Outputs - acceleration */
+	printf("Your rate of acceleration was %.1f\n", acceleration);
+
+	/*Successful execution of program ... returns ctrl to OS */
+	return (0);
+}
