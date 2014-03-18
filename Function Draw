@@ -1,0 +1,48 @@
+/*
+*	Chapter 3 Project 2
+* Description: Uses functions to draw a triangle and rectangle
+*/
+
+#include <stdio.h> /* printf definition */
+
+/* Function prototypes */
+void draw_triangle(void); /* Draws triangle*/
+
+void draw_rectangle(void); /* Draws rectangle */
+
+int
+main(void)
+{
+	draw_triangle(); /* Calls a function to draw the triangle */
+	
+	draw_rectangle(); /* Calls a function to draw a rectangle*/
+	
+	printf("\n\n"); /* Inserts 2 new lines */
+
+	draw_triangle(); /* Calls a function to draw the triangle */
+
+	draw_rectangle(); /* Calls a function to draw a rectangle*/
+
+	return (0);
+}
+
+/*Draws a triangle */
+void 
+draw_triangle(void)
+{	
+	printf("   /\\   \n");
+	printf("  /  \\  \n");
+	printf(" /    \\ \n");
+	printf ( " ------\n");
+}
+
+/* Draw rectangle. */
+void
+draw_rectangle(void) 
+{
+	printf("  ----------\n");
+	printf(" |          |\n");
+	printf(" |          |\n");
+	printf("  ----------\n");
+}
+
