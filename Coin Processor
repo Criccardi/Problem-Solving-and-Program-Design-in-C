@@ -1,0 +1,54 @@
+/*Super Market Coin Processor
+
+Converts change to personalized credit slips
+V1:User manually enters the number of each kind of coin in collection
+*/
+# include <stdio.h>
+
+int 
+main(void)
+{
+char first, middle, last; /* Customers initials for slip */
+int dollars, /* number of dollars */
+	quarters, /* number of quarters */
+	dimes, /* number of dimes */
+	nickles, /* number of nickles */
+	pennies, /* number of pennies */
+	total_cents, /* total value in cents */
+	total_dollars, /* total in just dollars */
+	left_over_change; /* remaining change */
+
+	
+/* get customers initials */
+printf("Enter your initials > ");
+scanf_s("%c%c%c", &first, &middle, &last);
+
+/* count number of coins*/
+printf("Enter Number of Dollars > \n");
+scanf_s("%d", &dollars);
+printf("Enter Number of Quarters > \n");
+scanf_s("%d", &quarters);
+printf("Enter Number of Dimes > \n");
+scanf_s("%d", &dimes);
+printf("Enter Number of Nickles > \n");
+scanf_s("%d", &nickles);
+printf("Enter Number of Pennies > \n");
+scanf_s("%d", &pennies);
+
+/* Determine total value of coins in cents */
+total_cents = (dollars * 100) + (quarters * 25) + (dimes * 10) + (nickles * 5) + pennies;
+
+/* Determine total dollars without change */
+total_dollars = total_cents / 100;
+
+/* Determine leftover change */
+left_over_change = total_cents % 100;
+
+printf("Thank you for choosing \n");
+printf(" %c%c%c, your total comes to:\n",first,middle,last);
+printf(" Dollars $ %d\n", total_dollars);
+printf(" Cents . %d\n", left_over_change);
+printf(" Total in cents %d\n", total_cents);
+
+return (0);
+}
