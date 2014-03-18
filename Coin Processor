@@ -44,7 +44,7 @@ total_dollars = total_cents / 100;
 /* Determine leftover change */
 left_over_change = total_cents % 100;
 
-printf("Thank you for choosing \n");
+printf("Thank you for choosing.... \n\n\n");
 printf(" %c%c%c, your total comes to:\n",first,middle,last);
 printf(" Dollars $ %d\n", total_dollars);
 printf(" Cents . %d\n", left_over_change);
