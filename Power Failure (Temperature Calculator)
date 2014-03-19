@@ -1,0 +1,42 @@
+/*
+	****	Description:
+	*** Estimates the temperature in a freezer (in C) given ***
+*** the elapsed time in hours since a power failure. ***
+****/
+
+#include <stdio.h>
+
+int
+main(void)	
+{
+	/* Variable Decleartions */
+	double elapse_time; /* Time Since Power Failure - input */
+	double temperature; /*Temperature in freezer - output */
+	int hours, minutes; /* Times since power failure - input */
+	double fahrenheit; /* Temperature converted to F */
+
+	/* Requesting User input */
+	printf(" How long has it been since the power failure ?\n");
+	printf(" Please Enter below : ");
+	printf(" Hours > ");
+	scanf_s("%d", &hours);
+	printf(" Minutes > ");
+	scanf_s("%d", &minutes);
+	
+/* Formula to convert time */
+elapse_time = hours + (minutes / 60 );
+
+/* Formula to calculate the temperature */
+temperature = (4 * elapse_time * elapse_time / (elapse_time + 2)) - 20;
+
+/* Forumla to display in Fahrenheit */
+
+fahrenheit = ((temperature * 9) / 5) + 32;
+
+printf(" The elapsed time has been %d Hours %d Minutes.\n", hours, minutes);
+printf(" The temperature in the freezer is now %f celcius. \n", temperature );
+printf(" The temperature in the freezer is now %f fahrenheit. \n", fahrenheit);
+
+return (0);
+
+}
