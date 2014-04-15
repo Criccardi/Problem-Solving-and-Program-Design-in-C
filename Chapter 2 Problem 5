@@ -1,0 +1,37 @@
+#include <stdio.h>
+#define hour 60
+
+int
+main(void)
+{
+
+	int volume,
+		minutes,
+		rate;
+
+	printf(" Volume to be infused (ml) = > ");
+	scanf_s("%d", &volume);
+	printf(" Minutes over which to infuse = > ");
+	scanf_s("%d", &minutes);
+
+	rate = volume * (hour / minutes);
+
+	printf(" VTBI: %d ml\n", volume);
+	printf(" Rate: %d ml/hr\n", rate);
+
+	return 0;
+}
+
+/* Hospitals use programmable pumps to deliver medications and fluids to intravenous
+lines at a set number of milliliters per hour. Write a program to output
+information for the labels the hospital pharmacy places on bags of I.V. medications
+indicating the volume of medication to be infused and the rate at which the
+pump should be set. The program should prompt the user to enter the quantity
+of fluid in the bag and the number of minutes over which it should be infused.
+Output the VTBI (volume to be infused) in ml and the infusion rate in ml/hr.
+Sample run:
+Volume to be infused (ml) => 100
+Minutes over which to infuse => 20
+VTBI: 100 ml
+Rate: 300 ml/hr
+*/
