@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define rate_per_mile 0.35 /* Rate that can be changed */
+
+int
+main(void){
+
+	int beginning_reading,
+		ending_reading,
+		miles_traveled;
+	double reinmbursement;
+
+	printf(" MILEAGE REINBURSEMENT CALCULATOR \n");
+	printf(" Enter beginning odometer reading = >");
+	scanf_s("%d", &beginning_reading );
+	printf(" Enter ending odometer reading = >");
+	scanf_s("%d", &ending_reading );
+
+	miles_traveled = ending_reading - beginning_reading;
+	reinmbursement = miles_traveled * rate_per_mile;
+
+	printf(" You traveled %d  miles. At $0.35 per mile, \n your reinmbursement is $%.2f.", miles_traveled, reinmbursement);
+
+	return 0;
+}
+
+/*Write a program that calculates mileage reimbursement for a salesperson at
+a rate of $.35 per mile. Your program should interact with the user in this
+manner:
+MILEAGE REIMBURSEMENT CALCULATOR
+Enter beginning odometer reading=> 13505.2
+Enter ending odometer reading=> 13810.6
+You traveled 305.4 miles. At $0.35 per mile,
+your reimbursement is $106.89. */
